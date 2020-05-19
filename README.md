@@ -1,2 +1,2 @@
 # intellihealth
-Systema Inteligente de Salud y Farmacos
+Sistema Inteligente de Salud y Farmacos
