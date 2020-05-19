@@ -1,2 +1,2 @@
 # intellihealth
-Systema Inteligente de Salud y Farmacos
+Systema Inteligente de Salud y Farmacos API
