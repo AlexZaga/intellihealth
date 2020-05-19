@@ -41,7 +41,7 @@ app.use((req, res, next) => {
 });
 //Start server
 HELPER.InitDB();
-//require('./controllers')(app);
+require('./controllers')(app);
 http.createServer(app).listen(app.get('port'), () => {
     HELPER.setmessageLog(HELPER.infoLog().concat('Server App listening and ready on ').concat(app.get('port')).concat(' port.'));
     HELPER.saveLog();

@@ -121,7 +121,7 @@ const HELPER = {
     },
     printGlobalMessage: (_res, _infomsg, _customsg, _infoId, _data) => {
         saveLog(HELPER.infoLog().concat(_customsg).concat(' => ').concat(_infomsg));
-        _res.status(_infoId).json(UTILS.formatMessage(_infoId, _customsg, _data));
+        _res.status(_infoId).json(HELPER.formatMessage(_infoId, _customsg, _data));
     },
     encodeItem: (_object) => {
         return encode64(_object);
