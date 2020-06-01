@@ -1,0 +1,12 @@
+{
+    "usuarioID" : null,
+    "nombre" : null,
+    "apaterno": null,
+    "amaterno": null,
+    "clave" : null,
+    "nivel" : null,
+    "estatus" : 1,
+    "sesion" : 0,
+    "fechaini" : null,
+    "fechafin" : null
+}

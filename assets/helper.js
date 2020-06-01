@@ -77,16 +77,15 @@ var validemail = (objemail) => {
     var sDtext = '[^\\x0d\\x5b-\\x5d\\x80-\\xff]';
     var sAtom = '[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+';
     var sQuotedPair = '\\x5c[\\x00-\\x7f]';
-    var sDomainLiteral = '\\x5b(' + sDtext + '|' + sQuotedPair + ')*\\x5d';
-    var sQuotedString = '\\x22(' + sQtext + '|' + sQuotedPair + ')*\\x22';
+    var sDomainLiteral = '\\x5b('.concat(sDtext).concat('|').concat(sQuotedPair).concat(')*\\x5d');
+    var sQuotedString = '\\x22('.concat(sQtext).concat('|').concat(sQuotedPair).concat(')*\\x22');
     var sDomain_ref = sAtom;
-    var sSubDomain = '(' + sDomain_ref + '|' + sDomainLiteral + ')';
-    var sWord = '(' + sAtom + '|' + sQuotedString + ')';
-    var sDomain = sSubDomain + '(\\x2e' + sSubDomain + ')*';
-    var sLocalPart = sWord + '(\\x2e' + sWord + ')*';
-    var sAddrSpec = sLocalPart + '\\x40' + sDomain; // complete RFC822 email address spec
-    var sValidEmail = '^' + sAddrSpec + '$'; // as whole string
-    
+    var sSubDomain = '('.concat(sDomain_ref).concat('|').concat(sDomainLiteral).concat(')');
+    var sWord = '('.concat(sAtom).concat('|').concat(sQuotedString).concat(')');
+    var sDomain = sSubDomain.concat('(\\x2e').concat(sSubDomain).concat(')*');
+    var sLocalPart = sWord.concat('(\\x2e').concat(sWord).concat(')*');
+    var sAddrSpec = sLocalPart.concat('\\x40').concat(sDomain); // complete RFC822 email address spec
+    var sValidEmail = '^'.concat(sAddrSpec).concat('$'); // as whole string
     var reValidEmail = new RegExp(sValidEmail);
     return reValidEmail.test(objemail);
 };
@@ -117,7 +116,7 @@ const HELPER = {
     },
     printGlobalErrorMessage: (_res, _errmsg, _customsg, _errId, _data) => {
         saveLog(HELPER.errorLog().concat(_customsg).concat(' => ').concat(_errmsg));
-        _res.status(_errId).json(UTILS.formatMessage(_errId, _customsg, _data));    
+        _res.status(_errId).json(HELPER.formatMessage(_errId, _customsg, _data));    
     },
     printGlobalMessage: (_res, _infomsg, _customsg, _infoId, _data) => {
         saveLog(HELPER.infoLog().concat(_customsg).concat(' => ').concat(_infomsg));
@@ -132,7 +131,7 @@ const HELPER = {
     codeQR: (_qrpath, _urlqry) => {
         return qrgenerate(_qrpath, _urlqry);
     },
-    dtisEndPoint: () => {
+    EndPoint: () => {
         return process.env.APIDTISENDPOINT;
     },
     isValidEmail: (email) => {
