@@ -81,6 +81,46 @@ const USUARIOS = {
         }catch(error){
             return callback(error, null);
         }
+    },
+    updateUser: async (_id, _name, _midlle, _last, _pwd, _level, _status, _session, callback) => {
+        try{
+            if(_pwd !== ""){
+                let result = await HELPER.useDB().collection(process.env.COLLNAME).updateOne(
+                {
+                    _id: HELPER.getID(_id)   
+                },
+                {
+                    $set: {
+                        nombre: _name,
+                        apaterno: _midlle,
+                        amaterno: _last,
+                        nivel: _level,
+                        estatus: _status,
+                        sesion: _session,
+                        clave: _pwd 
+                    }
+                });
+                return callback(null, result);
+            }else{
+                let result = await HELPER.useDB().collection(process.env.COLLNAME).updateOne(
+                {
+                    _id: HELPER.getID(_id)   
+                },
+                {
+                    $set: {
+                        nombre: _name,
+                        apaterno: _midlle,
+                        amaterno: _last,
+                        nivel: _level,
+                        estatus: _status,
+                        sesion: _session
+                    }
+                });
+                return callback(null, result);
+            }
+        }catch(error){
+            return callback(error, null);
+        }
     }
 };
 

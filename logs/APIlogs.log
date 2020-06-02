@@ -149,3 +149,26 @@
 01062020 02:52:36 [Info] Database [ stockdb ] connected!
 01062020 02:52:55 [Info] Foreing IP: ::1
 01062020 02:52:56 [Info] Success => 200 Success
+01062020 19:45:33 [Info] Server App listening and ready on 4550 port.
+01062020 19:45:34 [Info] Database [ stockdb ] connected!
+01062020 19:58:55 [Info] Server App listening and ready on 4550 port.
+01062020 19:58:56 [Info] Database [ stockdb ] connected!
+01062020 19:59:08 [Info] Foreing IP: ::1
+01062020 19:59:35 [Info] Server App listening and ready on 4550 port.
+01062020 19:59:36 [Info] Database [ stockdb ] connected!
+01062020 19:59:43 [Info] Foreing IP: ::1
+01062020 19:59:45 [Info] User updated successfully => 202 Accepted
+01062020 20:00:00 [Info] Foreing IP: ::1
+01062020 20:00:00 [Error] User not modified => 422 Unprocessable Entity
+01062020 20:00:36 [Info] Foreing IP: ::1
+01062020 20:00:37 [Info] User updated successfully => 202 Accepted
+01062020 20:01:34 [Info] Foreing IP: ::1
+01062020 20:01:34 [Info] User updated successfully => 202 Accepted
+01062020 20:02:00 [Info] Foreing IP: ::1
+01062020 20:02:00 [Error] Missing Parameters => 400 Bad Request
+01062020 20:02:12 [Info] Foreing IP: ::1
+01062020 20:02:12 [Info] User updated successfully => 202 Accepted
+01062020 20:02:34 [Info] Foreing IP: ::1
+01062020 20:02:34 [Info] User updated successfully => 202 Accepted
+01062020 20:03:39 [Info] Foreing IP: ::1
+01062020 20:03:39 [Info] User updated successfully => 202 Accepted

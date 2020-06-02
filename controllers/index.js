@@ -114,4 +114,23 @@ module.exports = (app) => {
             }); 
         }
     });
+    app.put(HELPER.EndPoint().concat('/users/edit'), auth, (req, res) => {
+        let _pwd = "";
+        const { Id, name, middle, last, pwd, level, status, session } = req.body;
+        if(HELPER.isValItem(Id) || HELPER.isValItem(name) || HELPER.isValItem(middle) || HELPER.isValItem(last) || HELPER.isValItem(pwd) || HELPER.isValItem(level) || HELPER.isValItem(status) || HELPER.isValItem(session) || isNaN(level) || isNaN(status) || isNaN(session)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            let _pswd = pwd.split('|');
+            if(_pswd.length > 1){
+                _pwd = HELPER.cipherPwd(_pswd[0]) || "";
+            }
+            USUARIOS.updateUser(Id, name, middle, last, _pwd, parseInt(level), parseInt(status), parseInt(session), (err, _result) => {
+                if(_result.modifiedCount === 1) {
+                    HELPER.printGlobalMessage(res, HELPER.get202suc(), 'User updated successfully', 202, _result.modifiedCount);
+                }else{
+                    HELPER.printGlobalErrorMessage(res, HELPER.get422err(), 'User not modified', 422, null);
+                }
+            });
+        }
+    });
 }
