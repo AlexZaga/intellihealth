@@ -1,0 +1,20 @@
+{
+    "laboratorio": null,
+    "sustancia": null,
+    "descripcion": null,
+    "fecha": null,
+    "mes": null,
+    "datos": {
+        "precio_farmacia": null,
+        "precio_publico": null,
+        "precio_cliente": null,
+        "precio_neto_compra": null,
+        "precio_venta": null,
+        "iva": false,
+        "utilidad": 0,
+        "existencias": 0
+    },
+    "imagen": null,
+    "status": null,
+    "responsable": null
+}
