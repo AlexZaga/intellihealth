@@ -172,3 +172,222 @@
 01062020 20:02:34 [Info] User updated successfully => 202 Accepted
 01062020 20:03:39 [Info] Foreing IP: ::1
 01062020 20:03:39 [Info] User updated successfully => 202 Accepted
+01062020 22:12:24 [Info] Server App listening and ready on 4550 port.
+01062020 22:12:25 [Info] Database [ stockdb ] connected!
+01062020 22:18:24 [Info] Server App listening and ready on 4550 port.
+01062020 22:18:25 [Info] Database [ stockdb ] connected!
+01062020 22:21:41 [Info] Server App listening and ready on 4550 port.
+01062020 22:21:42 [Info] Database [ stockdb ] connected!
+01062020 22:22:46 [Info] Foreing IP: ::1
+01062020 22:22:47 [Info] Success => 200 Success
+01062020 22:25:29 [Info] Foreing IP: ::1
+01062020 22:25:29 [Info] Success => 200 Success
+01062020 22:26:32 [Info] Server App listening and ready on 4550 port.
+01062020 22:26:34 [Info] Database [ stockdb ] connected!
+01062020 22:34:50 [Info] Server App listening and ready on 4550 port.
+01062020 22:34:51 [Info] Database [ stockdb ] connected!
+01062020 22:35:08 [Info] Server App listening and ready on 4550 port.
+01062020 22:35:09 [Info] Database [ stockdb ] connected!
+02062020 12:39:28 [Info] Server App listening and ready on 4550 port.
+02062020 12:39:29 [Info] Database [ stockdb ] connected!
+02062020 13:12:03 [Info] Server App listening and ready on 4550 port.
+02062020 13:12:04 [Info] Database [ stockdb ] connected!
+02062020 13:20:18 [Info] Server App listening and ready on 4550 port.
+02062020 13:20:19 [Info] Database [ stockdb ] connected!
+02062020 16:32:19 [Info] Server App listening and ready on 4550 port.
+02062020 16:32:20 [Info] Database [ stockdb ] connected!
+02062020 16:32:57 [Info] Foreing IP: ::1
+02062020 16:33:05 [Info] Foreing IP: ::1
+02062020 16:33:06 [Info] Success => 200 Success
+02062020 16:33:46 [Info] Foreing IP: ::1
+02062020 16:33:46 [Info] Success => 200 Success
+02062020 16:34:05 [Info] Server App listening and ready on 4550 port.
+02062020 16:34:06 [Info] Database [ stockdb ] connected!
+02062020 16:34:11 [Info] Foreing IP: ::1
+02062020 16:34:12 [Error] Laboratory not found => 404 Not Found
+02062020 16:36:39 [Info] Foreing IP: ::1
+02062020 16:36:39 [Info] Success => 200 Success
+02062020 16:41:39 [Info] Server App listening and ready on 4550 port.
+02062020 16:41:41 [Info] Database [ stockdb ] connected!
+02062020 16:44:54 [Info] Server App listening and ready on 4550 port.
+02062020 16:44:56 [Info] Database [ stockdb ] connected!
+02062020 16:50:19 [Info] Server App listening and ready on 4550 port.
+02062020 16:50:21 [Info] Database [ stockdb ] connected!
+02062020 16:51:14 [Info] Foreing IP: ::1
+02062020 16:51:16 [Info] Success => 200 Success
+02062020 17:05:44 [Info] Server App listening and ready on 4550 port.
+02062020 17:05:45 [Info] Database [ stockdb ] connected!
+02062020 17:24:47 [Info] Server App listening and ready on 4550 port.
+02062020 17:24:48 [Info] Database [ stockdb ] connected!
+02062020 17:26:37 [Info] Server App listening and ready on 4550 port.
+02062020 17:26:39 [Info] Database [ stockdb ] connected!
+02062020 17:28:57 [Info] Server App listening and ready on 4550 port.
+02062020 17:28:58 [Info] Database [ stockdb ] connected!
+02062020 17:29:16 [Info] Server App listening and ready on 4550 port.
+02062020 17:29:18 [Info] Database [ stockdb ] connected!
+02062020 17:40:38 [Info] Server App listening and ready on 4550 port.
+02062020 17:40:39 [Info] Database [ stockdb ] connected!
+02062020 17:55:24 [Info] Server App listening and ready on 4550 port.
+02062020 17:55:25 [Info] Database [ stockdb ] connected!
+02062020 19:49:48 [Info] Server App listening and ready on 4550 port.
+02062020 19:49:50 [Info] Database [ stockdb ] connected!
+02062020 20:02:49 [Info] Server App listening and ready on 4550 port.
+02062020 20:02:50 [Info] Database [ stockdb ] connected!
+02062020 21:40:21 [Info] Server App listening and ready on 4550 port.
+02062020 21:40:23 [Info] Database [ stockdb ] connected!
+02062020 21:42:19 [Info] Server App listening and ready on 4550 port.
+02062020 21:42:20 [Info] Database [ stockdb ] connected!
+02062020 22:09:11 [Info] Server App listening and ready on 4550 port.
+02062020 22:09:13 [Info] Database [ stockdb ] connected!
+02062020 22:10:37 [Info] Server App listening and ready on 4550 port.
+02062020 22:10:38 [Info] Database [ stockdb ] connected!
+02062020 22:13:56 [Info] Foreing IP: ::1
+02062020 22:13:56 [Error] Missing Parameters => 400 Bad Request
+02062020 22:16:01 [Info] Foreing IP: ::1
+02062020 22:16:02 [Error] Product already exists => 409 Conflict
+02062020 22:16:33 [Info] Server App listening and ready on 4550 port.
+02062020 22:16:35 [Info] Database [ stockdb ] connected!
+02062020 22:16:37 [Info] Foreing IP: ::1
+02062020 22:16:38 [Error] Product already exists => 409 Conflict
+02062020 22:18:11 [Info] Foreing IP: ::1
+02062020 22:22:20 [Info] Server App listening and ready on 4550 port.
+02062020 22:22:21 [Info] Database [ stockdb ] connected!
+02062020 22:22:26 [Info] Foreing IP: ::1
+02062020 22:22:27 [Error] Product already exists => 409 Conflict
+02062020 22:24:33 [Info] Foreing IP: ::1
+02062020 22:25:09 [Info] Server App listening and ready on 4550 port.
+02062020 22:25:10 [Info] Database [ stockdb ] connected!
+02062020 22:25:51 [Info] Foreing IP: ::1
+02062020 22:25:52 [Info] New Product added successfully => 201 Created
+02062020 22:27:33 [Info] Server App listening and ready on 4550 port.
+02062020 22:27:34 [Info] Database [ stockdb ] connected!
+02062020 22:30:14 [Info] Foreing IP: ::1
+02062020 22:30:16 [Info] New Product added successfully => 201 Created
+02062020 22:30:32 [Info] Foreing IP: ::1
+02062020 22:30:32 [Error] Product already exists => 409 Conflict
+02062020 22:30:34 [Info] Foreing IP: ::1
+02062020 22:30:35 [Error] Product already exists => 409 Conflict
+02062020 23:15:41 [Info] Server App listening and ready on 4550 port.
+02062020 23:15:43 [Info] Database [ stockdb ] connected!
+02062020 23:17:53 [Info] Server App listening and ready on 4550 port.
+02062020 23:17:55 [Info] Database [ stockdb ] connected!
+02062020 23:31:13 [Info] Foreing IP: ::1
+02062020 23:31:15 [Info] New Product added successfully => 201 Created
+02062020 23:32:58 [Info] Server App listening and ready on 4550 port.
+02062020 23:32:59 [Info] Database [ stockdb ] connected!
+02062020 23:33:10 [Info] Server App listening and ready on 4550 port.
+02062020 23:33:11 [Info] Database [ stockdb ] connected!
+02062020 23:33:17 [Info] Foreing IP: ::1
+02062020 23:33:18 [Info] New Product added successfully => 201 Created
+02062020 23:35:43 [Info] Foreing IP: ::1
+02062020 23:35:43 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:36:40 [Info] Foreing IP: ::1
+02062020 23:36:40 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:38:03 [Info] Server App listening and ready on 4550 port.
+02062020 23:38:04 [Info] Database [ stockdb ] connected!
+02062020 23:38:18 [Info] Foreing IP: ::1
+02062020 23:38:19 [Info] New Product added successfully => 201 Created
+02062020 23:39:30 [Info] Foreing IP: ::1
+02062020 23:39:30 [Error] Product already exists => 409 Conflict
+02062020 23:40:35 [Info] Foreing IP: ::1
+02062020 23:40:35 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:41:22 [Info] Server App listening and ready on 4550 port.
+02062020 23:41:23 [Info] Database [ stockdb ] connected!
+02062020 23:41:27 [Info] Foreing IP: ::1
+02062020 23:41:29 [Info] New Product added successfully => 201 Created
+02062020 23:41:35 [Info] Foreing IP: ::1
+02062020 23:41:35 [Error] Product already exists => 409 Conflict
+02062020 23:42:22 [Info] Foreing IP: ::1
+02062020 23:42:22 [Info] New Product added successfully => 201 Created
+02062020 23:42:25 [Info] Foreing IP: ::1
+02062020 23:42:25 [Error] Product already exists => 409 Conflict
+02062020 23:42:26 [Info] Foreing IP: ::1
+02062020 23:42:26 [Error] Product already exists => 409 Conflict
+02062020 23:42:27 [Info] Foreing IP: ::1
+02062020 23:42:27 [Error] Product already exists => 409 Conflict
+02062020 23:45:31 [Info] Foreing IP: ::1
+02062020 23:45:31 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:45:39 [Info] Foreing IP: ::1
+02062020 23:45:40 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:45:43 [Info] Foreing IP: ::1
+02062020 23:45:43 [Error] Something went wrong => 406 Not Acceptable
+02062020 23:47:06 [Info] Server App listening and ready on 4550 port.
+02062020 23:47:08 [Info] Database [ stockdb ] connected!
+02062020 23:48:07 [Info] Server App listening and ready on 4550 port.
+02062020 23:48:09 [Info] Database [ stockdb ] connected!
+02062020 23:48:40 [Info] Foreing IP: ::1
+02062020 23:48:42 [Info] New Product added successfully => 201 Created
+02062020 23:49:09 [Info] Foreing IP: ::1
+02062020 23:49:10 [Error] Product already exists => 409 Conflict
+02062020 23:50:30 [Info] Foreing IP: ::1
+02062020 23:50:30 [Info] New Product added successfully => 201 Created
+02062020 23:51:45 [Info] Server App listening and ready on 4550 port.
+02062020 23:51:46 [Info] Database [ stockdb ] connected!
+02062020 23:52:36 [Info] Foreing IP: ::1
+02062020 23:52:37 [Info] New Product added successfully => 201 Created
+02062020 23:52:41 [Info] Foreing IP: ::1
+02062020 23:52:42 [Error] Product already exists => 409 Conflict
+02062020 23:56:21 [Info] Server App listening and ready on 4550 port.
+02062020 23:56:22 [Info] Database [ stockdb ] connected!
+02062020 23:57:00 [Info] Server App listening and ready on 4550 port.
+02062020 23:57:01 [Info] Database [ stockdb ] connected!
+03062020 00:03:56 [Info] Server App listening and ready on 4550 port.
+03062020 00:03:58 [Info] Database [ stockdb ] connected!
+03062020 00:13:50 [Info] Server App listening and ready on 4550 port.
+03062020 00:13:51 [Info] Database [ stockdb ] connected!
+03062020 00:18:14 [Info] Server App listening and ready on 4550 port.
+03062020 00:18:15 [Info] Database [ stockdb ] connected!
+03062020 00:19:03 [Info] Server App listening and ready on 4550 port.
+03062020 00:19:04 [Info] Database [ stockdb ] connected!
+03062020 00:24:03 [Info] Server App listening and ready on 4550 port.
+03062020 00:24:05 [Info] Database [ stockdb ] connected!
+03062020 00:24:23 [Info] Server App listening and ready on 4550 port.
+03062020 00:24:24 [Info] Database [ stockdb ] connected!
+03062020 00:28:18 [Info] Server App listening and ready on 4550 port.
+03062020 00:28:19 [Info] Database [ stockdb ] connected!
+03062020 00:35:19 [Info] Server App listening and ready on 4550 port.
+03062020 00:35:20 [Info] Database [ stockdb ] connected!
+03062020 00:45:19 [Info] Server App listening and ready on 4550 port.
+03062020 00:45:20 [Info] Database [ stockdb ] connected!
+03062020 00:45:44 [Info] Server App listening and ready on 4550 port.
+03062020 00:45:46 [Info] Database [ stockdb ] connected!
+03062020 00:46:16 [Info] Server App listening and ready on 4550 port.
+03062020 00:46:17 [Info] Database [ stockdb ] connected!
+03062020 00:48:05 [Info] Foreing IP: ::1
+03062020 00:48:07 [Info] Success => 200 Success
+03062020 00:48:33 [Info] Foreing IP: ::1
+03062020 00:48:59 [Info] Server App listening and ready on 4550 port.
+03062020 00:49:00 [Info] Database [ stockdb ] connected!
+03062020 00:49:07 [Info] Foreing IP: ::1
+03062020 00:49:08 [Error] Something went wong => 406 Not Acceptable
+03062020 00:50:09 [Info] Server App listening and ready on 4550 port.
+03062020 00:50:10 [Info] Database [ stockdb ] connected!
+03062020 00:50:18 [Info] Foreing IP: ::1
+03062020 00:50:41 [Info] Server App listening and ready on 4550 port.
+03062020 00:50:42 [Info] Database [ stockdb ] connected!
+03062020 00:50:45 [Info] Foreing IP: ::1
+03062020 00:50:47 [Error] Product not found => 404 Not Found
+03062020 00:52:00 [Info] Foreing IP: ::1
+03062020 00:52:00 [Error] Product not found => 404 Not Found
+03062020 00:52:09 [Info] Foreing IP: ::1
+03062020 00:52:09 [Info] Success => 200 Success
+03062020 00:54:39 [Info] Foreing IP: ::1
+03062020 00:54:46 [Info] Foreing IP: ::1
+03062020 00:54:46 [Error] Missing Parameters => 400 Bad Request
+03062020 00:55:39 [Info] Foreing IP: ::1
+03062020 00:55:39 [Error] Missing Parameters => 400 Bad Request
+03062020 00:56:26 [Info] Foreing IP: ::1
+03062020 00:56:26 [Info] User updated successfully => 202 Accepted
+03062020 00:57:02 [Info] Foreing IP: ::1
+03062020 00:57:02 [Error] User not modified => 422 Unprocessable Entity
+03062020 00:57:11 [Info] Foreing IP: ::1
+03062020 00:57:11 [Info] User updated successfully => 202 Accepted
+03062020 00:57:42 [Info] Foreing IP: ::1
+03062020 00:57:47 [Info] Foreing IP: ::1
+03062020 00:57:48 [Info] Success => 200 Success
+03062020 00:58:38 [Info] Foreing IP: ::1
+03062020 00:58:38 [Info] User updated successfully => 202 Accepted
+03062020 00:58:59 [Info] Foreing IP: ::1
+03062020 00:58:59 [Info] Success => 200 Success
+03062020 01:06:43 [Info] Server App listening and ready on 4550 port.
+03062020 01:06:46 [Info] Database [ stockdb ] connected!

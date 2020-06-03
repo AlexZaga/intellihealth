@@ -1,4 +1,6 @@
 {
+    "_id":null,
+    "itemID": null,
     "laboratorio": null,
     "sustancia": null,
     "descripcion": null,
@@ -11,10 +13,10 @@
         "precio_neto_compra": null,
         "precio_venta": null,
         "iva": false,
-        "utilidad": 0,
-        "existencias": 0
+        "utilidad": null,
+        "existencias": null
     },
     "imagen": null,
-    "status": null,
+    "estatus": 1,
     "responsable": null
 }

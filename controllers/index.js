@@ -2,6 +2,7 @@
 require('dotenv/config');
 const HELPER = require('../assets/helper');
 const USUARIOS = require('../models/usuarios');
+const PRODUCTOS = require('../models/productos');
 const cors = require('cors');
 
 //Implements authentication
@@ -18,6 +19,20 @@ var auth = (req, res, next) => {
             HELPER.printGlobalErrorMessage(res, HELPER.get401err(), 'Invalid Authentication', 401, '');
         }
     }
+};
+//User Scope
+var isUserScope = (req, res, next) => {
+    const { _id } = req.body;
+    //Check user session
+    USUARIOS.getUserId(_id, (err, _result) => {
+        if(err || _result === null){
+            printGlobalErrorMessage(res, UTILS.get401err(), 'User not in session', 401);
+        }else if(_result){
+            return next();
+        }else{
+            printGlobalErrorMessage(res, UTILS.get403err(), 'Access not Allowed', 403);
+        }
+    });
 };
 var validate = (_obj) => {
     if(parseInt(_obj.status) === 0 || parseInt(_obj.session) === 1) return false;
@@ -126,6 +141,107 @@ module.exports = (app) => {
             }
             USUARIOS.updateUser(Id, name, middle, last, _pwd, parseInt(level), parseInt(status), parseInt(session), (err, _result) => {
                 if(_result.modifiedCount === 1) {
+                    HELPER.printGlobalMessage(res, HELPER.get202suc(), 'User updated successfully', 202, _result.modifiedCount);
+                }else{
+                    HELPER.printGlobalErrorMessage(res, HELPER.get422err(), 'User not modified', 422, null);
+                }
+            });
+        }
+    });
+/***************************************** Products methods ************************************/
+    app.get(HELPER.EndPoint().concat('/products/all'), auth, (req, res) => {
+        PRODUCTOS.getAllProducts((err, _result) => {
+            if(err){
+                HELPER.printGlobalErrorMessage(res, HELPER.get406err(), 'Something went wrong', 406, err);
+            }else if(_result === null || _result.length === 0){
+                HELPER.printGlobalErrorMessage(res, HELPER.get404err(), 'Products not found', 404, _result);
+            }else{
+                HELPER.printGlobalMessage(res, HELPER.get200suc(), 'Success', 200, _result);
+            }
+        });
+    });
+    app.post(HELPER.EndPoint().concat('/products/labs'), auth, (req, res) => {
+        const { laboratory } = req.body;
+        if(HELPER.isValItem(laboratory)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            PRODUCTOS.getLab(laboratory, (err, _result) => {
+                if(err){
+                    HELPER.printGlobalErrorMessage(res, HELPER,get406err(), 'Something went wong', 406, err);
+                }else if(_result === null || _result.length === 0){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get404err(), 'Laboratory not found', 404, _result);
+                }else{
+                    HELPER.printGlobalMessage(res, HELPER.get200suc(), 'Success', 200, _result);
+                }
+            });
+        }
+    });
+    app.post(HELPER.EndPoint().concat('/products/status'), auth, (req, res) => {
+        const { status } = req. body;
+        if(HELPER.isValItem(status) || isNaN(status)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            PRODUCTOS.getStatus(parseInt(status), (err, _result) => {
+                if(err || _result === null || _result.length === 0){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get404err(), 'Product not found', 404, _result);
+                }else{
+                    HELPER.printGlobalMessage(res, HELPER.get200suc(), 'Success', 200, _result);
+                }
+            });
+        }
+    });
+    app.post(HELPER.EndPoint().concat('/products/manager'), auth, (req, res) => {
+        const { manager } = req.body;
+        if(HELPER.isValItem(manager)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            PRODUCTOS.getManager(manager, (err, _result) => {
+                if(err){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get406err(), 'Something went wrong', 406, err);
+                }else if(_result === null || _result.length === 0){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get404err(), 'Manager not found', 404, _result);
+                }else{
+                    HELPER.printGlobalMessage(res, HELPER.get200suc(), 'Success', 200, _result);
+                }
+            });
+        }
+    });
+    app.post(HELPER.EndPoint().concat('/products/add'), auth, (req, res) => {
+        const { lab, compund, desc, month, price1, price2, price3, stock, image, manager } = req.body;
+        if(HELPER.isValItem(lab) || HELPER.isValItem(compund) || HELPER.isValItem(desc) || HELPER.isValItem(month) || isNaN(month) || HELPER.isValItem(price1) || isNaN(price1) || HELPER.isValItem(price2) || isNaN(price2) || HELPER.isValItem(price3) || isNaN(price3) || HELPER.isValItem(stock) || isNaN(stock) || HELPER.isValItem(image) || HELPER.isValItem(manager)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            //Eval if not duplicate
+            let _key = lab.concat(compund).concat(desc);
+            PRODUCTOS.getItemID(_key, (err, _result) => {
+                if(err){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get406err(), 'Something went wrong', 406, err.errmsg);
+                }else if(_result.length > 0){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get409err(), 'Product already exists', 409, _result.length);
+                }else{
+                    //Add new product
+                    PRODUCTOS.newProduct(lab, compund, desc, parseInt(month), price1, price2, price3, parseInt(stock), image, manager, (err, _resultt) => {
+                        if(err){
+                            HELPER.printGlobalErrorMessage(res, HELPER.get406err(), 'Something went wrong', 406, err.errmsg);
+                        }else if(_resultt){
+                            HELPER.printGlobalMessage(res, HELPER.get201cre(), 'New Product added successfully', 201, _resultt.insertedId);
+                        }else{
+                            HELPER.printGlobalErrorMessage(res, HELPER.get500err(), 'Proccess not performed', 500, null);
+                        }
+                    });
+                }
+            })
+        }
+    });
+    app.put(HELPER.EndPoint().concat('/products/edit'), auth, (req, res) => {
+        const { id, lab, compund, desc, month, price1, price2, price3, status } = req.body;
+        if(HELPER.isValItem(lab) || HELPER.isValItem(compund) || HELPER.isValItem(desc) || HELPER.isValItem(month) || isNaN(month) || HELPER.isValItem(price1) || isNaN(price1) || HELPER.isValItem(price2) || isNaN(price2) || HELPER.isValItem(price3) || isNaN(price3) || HELPER.isValItem(status) || isNaN(status) || HELPER.isValItem(id)){
+            HELPER.printGlobalErrorMessage(res, HELPER.get400err(), 'Missing Parameters', 400, '');
+        }else{
+            PRODUCTOS.updateProduct(id, lab, compund, desc, parseInt(month), price1, price2, price3, parseInt(status), (err, _result) => {
+                if(err){
+                    HELPER.printGlobalErrorMessage(res, HELPER.get406err(), 'Something went wrong', 406, err);   
+                }else if(_result.modifiedCount === 1){
                     HELPER.printGlobalMessage(res, HELPER.get202suc(), 'User updated successfully', 202, _result.modifiedCount);
                 }else{
                     HELPER.printGlobalErrorMessage(res, HELPER.get422err(), 'User not modified', 422, null);

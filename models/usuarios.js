@@ -67,15 +67,17 @@ const USUARIOS = {
         }
     },
     newUser: async (_usrID, _name, _midlle, _last, _pwd, _level, callback) => {
-        OBJUSER.usuarioID = _usrID;
-        OBJUSER.nombre = _name;
-        OBJUSER.apaterno = _midlle;
-        OBJUSER.amaterno = _last;
-        OBJUSER.clave = _pwd;
-        OBJUSER.nivel = _level;
-        OBJUSER.fechaini = new Date();
-        OBJUSER.fechafin = new Date('9999-01-01 00:00:00');
         try{
+            OBJUSER._id = HELPER.generateId(),
+            OBJUSER.usuarioID = _usrID;
+            OBJUSER.nombre = _name;
+            OBJUSER.apaterno = _midlle;
+            OBJUSER.amaterno = _last;
+            OBJUSER.clave = _pwd;
+            OBJUSER.nivel = _level;
+            OBJUSER.fechaini = new Date();
+            OBJUSER.fechafin = new Date('9999-01-01 00:00:00');
+    
             let result = await HELPER.useDB().collection(process.env.COLLNAME).insertOne(OBJUSER);
             return callback(null, result);
         }catch(error){
